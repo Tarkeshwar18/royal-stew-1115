@@ -1,0 +1,107 @@
+.splide{
+    width: 100%;
+    margin: auto;
+    place-items: center;
+    /* border: 1px solid red; */
+}
+.splide__track{
+    /* border: 1px solid blue; */
+    width: 95%;
+    height: 200px;
+    margin: auto;
+}
+
+.splide__slide{
+    width: 100%;
+    margin: auto;
+    /* border:1px solid cyan */
+}
+
+.img_box>img{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.img16{
+    height: 200px;
+}
+
+/* .container {
+width: 100%;
+height: 100vh;
+background: #222;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.swiper {
+width: 80%;
+height: fit-content;
+
+}
+.swiper-slide>img {
+width: 100%;
+height: 500px;
+} */
+
+/* first slider */
+#one{
+    margin:20px 20px 50px 40px;
+}
+.cont1 {
+    width: 100%;
+    margin-top: 60px;
+    height:25vh;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper {
+width: 100%;
+height: fit-content;
+
+}
+.swiper-slide>img {
+width: 100%;
+height: 200px;
+}
+
+
+
+#studio{
+    width: 98%;
+    gap:20px;
+    display: flex;
+    margin-left: 35px;
+    margin-bottom: 35px;
+}
+#studio >div{
+    width: 100%;
+}
+#top{
+    width: 100%;
+    display: flex;
+     gap:20px ;
+     margin-left: 45px;
+     margin-bottom: 35px;
+}
+#top>img {
+    width: 100%;
+}
+
+#top1{
+    width: 100%;
+    display: flex;
+     gap:20px ;
+     margin-left: 45px;
+     margin-bottom: 35px;
+}
+
+#bottom{
+    width: 100%;
+    display: flex;
+     gap:20px ;
+     margin-left: 45px;
+     margin-bottom: 35px;
+}
