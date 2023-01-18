@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar{
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-evenly;
+}
+#navbar .menu ul{
+    display: flex;
+    list-style: none;
+}
+
+#navbar .menu ul li a{
+ text-decoration: none;
+ color: black;
+ margin-left: 10px;
+ margin-right: 10px;
+ font-weight: 700;
+}
+.images  a{
+    margin-left: 15px;
+    margin-right: 15px;
+    color: black;
+}
+#navbar .menu .active, #navbar .menu a:hover {
+    color: #20a87e;
+}
+
+/* Navbar hover Start*/
+#arr-container{
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    /* background: red; */
+    display: none;
+    position: absolute;
+    padding: 12px 16px;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+}
+.wdc-btn:hover #meko{
+    display: block;
+}
+.arr-page{
+    display: flex;
+    justify-content: space-between;
+}
+.drop-menu{
+    width: 50%;
+    height: auto;
+    border-right: 1px solid grey;
+}
+
+.drop-menu a{
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    display: block;
+    line-height: 1.5;
+}
+.image-screen{
+    display: flex;
+    justify-content: space-evenly;
+    width: 83%;
+}
+.image-screen a img{
+    width: 28%;
+}
+
+img{
+    width: 100%;
+}
