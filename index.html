@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css" class="css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <body>
+        <!--....................... 3 slide show in one div .......................................... -->
+    <div id="slideshowCont">
+        <div class="slideBox">
+        <img id="slideShow" src="https://images.dailyobjects.com/marche/product-images/1204/alligator-idyll-tote-images/Blue-Idyll-Tote-7.jpg"  alt="slide1">
+        <div class="name_recess">
+            <h2>Recess <span><i style="font-weight: unset;" class="fa-thin fa-dash"></i></span></h2>
+            <h2>Collection <span><i style="font-weight: unset;" class="fa-regular fa-arrow-right"></i></span></h2>
+        </div>
+        </div>
+        <div class="slideBox">
+        <img id="slideShow2" src="https://images.dailyobjects.com/marche/product-images/1301/alligator-easy-square-pouch-images/Blue-Easy-Square-Pouch-5.jpg"  alt="slide2">
+        </div>
+        <div class="slideBox">
+            <img id="slideShow3" src="https://images.dailyobjects.com/marche/feature-banner/retreat-crossbody-1.jpg"  alt="slide3">
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // ...................................Slide show part..............................................................................
+    let arr = [
+        "https://images.dailyobjects.com/marche/icons/recess-collection-icon.jpg",
+        "https://images.dailyobjects.com/marche/colllectionPage/recess-collection/7.jpg",
+        "https://images.dailyobjects.com/marche/feature-banner/retreat-crossbody-2.jpg",
+        "https://images.dailyobjects.com/marche/product-images/1203/squid-retreat-crossbody-images/Squid-Retreat-Crossbody-6.jpg",
+    ]
+    var index1 = 0;
+    function slideshow1() {
+        slideShow.setAttribute("src", arr[index1]);
+        index1++;
+        if (index1 >= arr.length) {
+            index1 = 0;
+        }
+    }
+    setInterval(slideshow1, 2000);
+
+    let arr2 = [
+        "https://images.dailyobjects.com/marche/colllectionPage/recess-collection/sleeve-3r.jpg",
+        "https://images.dailyobjects.com/marche/icons/recess-collection-icon.jpg",
+        "https://images.dailyobjects.com/marche/colllectionPage/recess-collection/crossbody-2n.jpg",
+        "https://images.dailyobjects.com/marche/feature-banner/idyll-tote-2.jpg",
+    ]
+    var index2 = 0;
+    function slideshow2() {
+        slideShow2.setAttribute("src", arr2[index2]);
+        index2++;
+        if (index2 >= arr2.length) {
+            index2 = 0;
+        }
+    }
+    setInterval(slideshow2, 2000);
+
+    let arr3 = [
+        "https://images.dailyobjects.com/marche/feature-banner/retreat-crossbody.jpg",
+        "https://images.dailyobjects.com/marche/product-images/1203/alligator-retreat-crossbody-images/Alligator-Retreat-Crossbody-6.jpg",
+        "https://images.dailyobjects.com/marche/feature-banner/idyll-tote-1.jpg",
+        "https://images.dailyobjects.com/marche/product-images/1204/langoor-idyll-tote-images/Langoor-Idyll-Tote-6.jpg",
+    ]
+    var index3 = 0;
+    function slideshow3() {
+        slideShow3.setAttribute("src", arr3[index3]);
+        index3++;
+        if (index3 >= arr3.length) {
+            index3 = 0;
+        }
+    }
+    setInterval(slideshow3, 2000);
+</script>
