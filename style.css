@@ -1,3 +1,7 @@
+
+
+
+
 .splide{
     width: 100%;
     margin: auto;
@@ -105,3 +109,158 @@ height: 200px;
      margin-left: 45px;
      margin-bottom: 35px;
 }
+
+/* footer code starts here */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(247, 247, 247);
+}
+footer {
+    margin-top: 50px;
+}
+footer > #featured-in {
+    padding: 25px 0px;
+    border-top: 1px solid lightgrey;
+}
+footer > #featured-in > h2 {
+    text-align: center;
+    margin: 20px 0px 50px 0px;
+}
+footer > #featured-in > img {
+    width: 100%;
+}
+footer > #get-exclusive-offers {
+    border-top: 1px solid lightgrey;
+}
+footer > #get-exclusive-offers > h2 {
+    text-align: center;
+    margin: 50px 0px 30px 0px;
+}
+footer > #get-exclusive-offers > #subscribe {
+    text-align: center;
+}
+footer > #get-exclusive-offers > #subscribe > #email {
+    padding: 15px;
+    width: 270px;
+    font-size: 16px;
+    border: 0px;
+}
+footer > #get-exclusive-offers > #subscribe > #subscribe-btn {
+    padding: 15px;
+    font-size: 16px;
+    margin-left: -5px;
+    border: 0px;
+    background-color: rgb(169, 169, 169);
+}
+footer > #get-exclusive-offers > #icons {
+    display: flex;
+    margin: 70px 0px 40px 0px;
+    justify-content: space-evenly;
+}
+footer > #get-exclusive-offers > #icons > div {
+    display: flex;
+    align-items: center;
+}
+footer > #get-exclusive-offers > #icons > div > span {
+    padding-left: 10px;
+}
+footer > #footer-details {
+    border-top: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+}
+footer > #footer-details > #footer-details-links {
+    width: 60%;
+    padding: 50px 0px;
+    display: flex;
+    line-height: 1.4;
+    justify-content: space-around;
+}
+footer > #footer-details > #footer-details-links h3 {
+    margin-bottom: 10px;
+}
+footer > #footer-details > #footer-details-follow > div {
+    padding: 40px;
+    border-left: 1px solid lightgrey;
+}
+footer > #footer-details > #footer-details-follow {
+    text-align: center;
+}
+footer > #footer-details > #footer-details-follow > div:nth-child(1) {
+    border-bottom: 1px solid lightgrey;
+}
+footer > #footer-details > #footer-details-follow h2 {
+    margin-bottom: 10px;
+}
+footer > #footer-details > #footer-details-follow > div:nth-child(2) img {
+    width: 140px;
+}
+footer > #secure-payment {
+    padding: 40px 0px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+footer > #secure-payment > h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+footer > #secure-payment > div {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+}
+footer > #secure-payment > div > img {
+    width: 100%;
+}
+footer > #most-searched {
+    padding: 30px;
+    line-height: 2;
+}
+footer > #most-searched > h3 {
+    margin-bottom: -10px;
+}
+footer > #most-searched p {
+    font-size: 13px;
+}
+footer > #most-searched h4 {
+    margin-top: 15px;
+}
+footer > #most-searched > div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+footer > #gifts > h3 {
+    margin-bottom: -10px;
+}
+footer > #gifts {
+    padding: 30px;
+    line-height: 2;
+}
+footer > #gifts p {
+    font-size: 13px;
+}
+footer > #gifts h4 {
+    margin-top: 15px;
+}
+footer > #gifts > div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+footer > #copyright {
+    height: 70px;
+    padding-left: 30px;
+    color: white;
+    background-color: black;
+}
+footer > #copyright > p {
+    line-height: 70px;
+}
+.border {
+    border-top: 1px solid lightgrey;
+}
+/* footer code ends here */
