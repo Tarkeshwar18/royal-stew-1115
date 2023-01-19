@@ -1,8 +1,10 @@
+/* navbar start here */
 .navbar{
     width: 100%;
     /* background-color: red; */
-    height: 100px;
+    height: 85px;
     display: flex;
+    border-bottom: 1px solid rgb(190, 187, 187);
 }
 .navbar .logo{
     width: 10%;
@@ -19,6 +21,7 @@ width: 70%;
     justify-content: space-around;
     width: 70%;
     margin-bottom: 30px;
+    font-family: serif;
 }
 /* .wdc-btn .active{
     background-color: red;
@@ -45,6 +48,7 @@ width: 70%;
     margin-bottom: 5px;
     margin-left: 15px;
     margin-right: 15px;
+    color: black;
 }
 .wdc-btn a{
     color: black;
@@ -63,23 +67,25 @@ width: 70%;
 .dropdown{
     display: none;
     position: absolute;
-    z-index: -1 ;
+    z-index: 1 ;
     width: 130%;
     height: auto;
     padding: 20px;
+    /* margin-top: 25px; */
     margin-left: -170px;
     background-color: white;
 }
 .dropdown .images{
     width: 70%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-left: 30px;
     margin-top: 30px;
 }
 .cases-sleeves .dropdown{
     display: none;
     position: absolute;
-    z-index: -1 ;
+    z-index: 1 ;
     width: 130%;
     height: auto;
     padding: 20px;
@@ -89,6 +95,7 @@ width: 70%;
 
 .cases-sleeves .hour-sub-menu {
     width: 60%;
+    margin-left: 50px;
 }
 .cases-sleeves .poster-dopdown{
     width: 20%;
@@ -98,11 +105,11 @@ width: 70%;
     width: 100%;
     height: 500px;
 }
-.dropdown .images a{
-    width: 25%;
-}
+/* .dropdown .images a{
+    width: 100%;
+} */
 .dropdown .images a img{
-    width: 50%;
+    width: 70%;
 }
 /* .dropdown.section-2{
     align-items: flex-start;
@@ -132,3 +139,5 @@ width: 70%;
 sup{
     color: red;
 }
+
+/* navbar end here */
