@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="search.css" class="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="search_bar">
+        <div id="search_input">
+            <!-- <h5>Search</h5> -->
+            <div class="main_search">
+                <input type="text" placeholder="Search" id="product_searchBar">
+                <i class="fa-solid fa-magnifying-glass" id="seach-icon" onclick="filterDataclick()"></i>
+            </div> 
+        </div>
+    </div>
+    <div id="search_result_div">
+
+    </div>
+</body>
+</html>
+<script>
+    // ............................................search page functionality .....................................................
+
+    let url =  "https://63c788db5c0760f69ab9188f.mockapi.io/products";
+
+    
+    let icon = document.getElementById("seach-icon");
+    let main = document.getElementById("search_result_div");
+    let new_data = []
+    let productList = []
+
+    fetch(url)
+    .then(res => res.json())
+    .then((data)=>{
+        // console.log("data",data);
+        
+        productList = data.map((item)=>{
+           return{
+            image: `${item.image}`,
+            title:item.title,
+            descreption: item.descreption,
+            category:item.category,
+            price:item.price
+           }
+        })
+       
+    })
+
+
+    function filterDataclick(){
+        let searchValue = document.getElementById("product_searchBar").value;
+        main.innerHTML = null;
+
+       new_data = productList.filter((item,ind)=>{
+        if(searchValue.toLowerCase() === item.category.toLowerCase()){
+            return item.category.trim().toLowerCase().includes(searchValue.trim().toLowerCase())
+        }
+       })
+
+        new_data.forEach(ele=>{
+            let card_list = document.createElement("div");
+            card_list.setAttribute("id","card-list");
+
+            let card = document.createElement("div");
+            card.setAttribute("class","productCard")
+
+            let imgdiv=document.createElement("div");
+            imgdiv.setAttribute("class","img-div")
+
+            let image = document.createElement("img");
+            image.setAttribute("src",ele.image);
+            imgdiv.append(image);
+
+            let detail_div=document.createElement("div");
+            detail_div.setAttribute("class","detail_div")
+            let price = document.createElement("h4");
+            price.innerText="Rs. "+ele.price;
+
+            let title = document.createElement("p");
+            title.innerText = ele.title;
+
+            let descreption = document.createElement("p");
+            descreption.innerText = ele.descreption;
+
+            let btn= document.createElement("button");
+            btn.innerText = "Add To Cart"
+
+            detail_div.append(price,title,descreption,btn)
+
+
+            card.append(imgdiv,detail_div)
+            card_list.append(card)
+            main.append(card_list);
+        })
+    }
+    filterDataclick(new_data)
+
+</script>
