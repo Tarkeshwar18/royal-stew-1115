@@ -309,6 +309,16 @@ i{
         margin-left: 10px;
     }
 }
+
+#percent{
+    margin-top: 90px;
+   }
+   img{
+    width: 100%;
+    padding: 0px 10px;
+   }
+
+
 /* footer code starts here */
 * {
     margin: 0;

@@ -4,3 +4,9 @@ links.forEach(btn => btn.addEventListener("click",(e)=>{
      document.querySelector(".wdc-btn.active").classList.remove("active");
      btn.classList.add("active")
   }));
+  
+  let percent=document.querySelector("#percent")
+
+percent.addEventListener("click",()=>{
+    window.location.assign('./percent2.html')
+})
