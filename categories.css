@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#categories-container > #category-banner > img {
+    width: 100%;
+}
+#categories-container > #category-h2 {
+    text-align: center;
+    padding: 50px 0px;
+    border-bottom: 1px solid lightgrey;
+}
+#categories-container > #categories {
+    width: 70%;
+    margin: auto;
+    padding: 40px 0px 100px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 70px;
+}
+#categories-container > #categories > div {
+    cursor: pointer;
+}
+#categories-container > #categories > div img {
+    width: 100%;
+    border-radius: 50%;
+}
+#categories-container > #categories > div > h3 {
+    margin-top: 7px;
+    text-align: center;
+}
