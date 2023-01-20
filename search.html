@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
     <link rel="stylesheet" href="search.css" class="css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
@@ -14,9 +15,13 @@
             <!-- <h5>Search</h5> -->
             <div class="main_search">
                 <input type="text" placeholder="Search" id="product_searchBar">
-                <i class="fa-solid fa-magnifying-glass" id="seach-icon" onclick="filterDataclick()"></i>
+                <i class="fa-solid fa-magnifying-glass" id="seach-icon" onclick="filter()"></i>
             </div> 
         </div>
+    </div>
+    <div class="sortDiv">
+       <button id="lowTohigh" class="button-grow">Low To High</button>
+       <button id="highTolow" class="button-grow">High To Low</button>
     </div>
     <div id="search_result_div">
 
@@ -28,12 +33,14 @@
 
     let url =  "https://63c788db5c0760f69ab9188f.mockapi.io/products";
 
-    
     let icon = document.getElementById("seach-icon");
     let main = document.getElementById("search_result_div");
+    let sorting = document.getElementById("sortByprice");
+    let lowTohigh = document.getElementById("lowTohigh");
+    let highTolow = document.getElementById("highTolow");
     let new_data = []
     let productList = []
-
+    let sortList = []
     fetch(url)
     .then(res => res.json())
     .then((data)=>{
@@ -48,19 +55,55 @@
             price:item.price
            }
         })
-       
+        sortList=productList
     })
 
 
-    function filterDataclick(){
+    
+    lowTohigh.addEventListener("click",()=>{
+            main.innerHTML=null
+           let sortarr = new_data.sort((a,b)=>{
+            if(a===b){
+                return 0;
+            }
+            else{
+                return +(a.price) < +(b.price) ? -1 : 1;
+            }
+           })
+       
+           filterDataclick(sortarr);
+        
+    });
+    highTolow.addEventListener("click",()=>{
+            main.innerHTML=null
+           let sortarr = new_data.sort((a,b)=>{
+            if(a===b){
+                return 0;
+            }
+            else{
+                return +(b.price) < +(a.price) ? -1 : 1;
+            }
+           })
+          
+           filterDataclick(sortarr);
+        
+    });
+
+    function filter(){
         let searchValue = document.getElementById("product_searchBar").value;
         main.innerHTML = null;
 
-       new_data = productList.filter((item,ind)=>{
-        if(searchValue.toLowerCase() === item.category.toLowerCase()){
-            return item.category.trim().toLowerCase().includes(searchValue.trim().toLowerCase())
-        }
-       })
+        new_data = productList.filter((item,ind)=>{
+         if(searchValue.toLowerCase() === item.category.toLowerCase()){
+             return item.category.trim().toLowerCase().includes(searchValue.trim().toLowerCase())
+         }
+        })
+        filterDataclick(new_data)
+
+    }
+    
+
+    function filterDataclick(new_data){
 
         new_data.forEach(ele=>{
             let card_list = document.createElement("div");
@@ -79,25 +122,17 @@
             let detail_div=document.createElement("div");
             detail_div.setAttribute("class","detail_div")
             let price = document.createElement("h4");
-            price.innerText="Rs. "+ele.price;
-
-            let title = document.createElement("p");
-            title.innerText = ele.title;
+            price.innerText="Rs. "+ ele.price;
 
             let descreption = document.createElement("p");
             descreption.innerText = ele.descreption;
-
-            let btn= document.createElement("button");
-            btn.innerText = "Add To Cart"
-
-            detail_div.append(price,title,descreption,btn)
-
+            detail_div.append(price,descreption)
 
             card.append(imgdiv,detail_div)
             card_list.append(card)
             main.append(card_list);
         })
     }
-    filterDataclick(new_data)
+   
 
 </script>
