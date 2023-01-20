@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#start{
+    text-align: center;
+}
+#line{
+    margin-top: 100px;
+    border: 1px solid rgb(247, 244, 240);
+    
+}
+#guest{
+    margin-top: 100px;
+    /* border: 1px solid blueviolet; */
+    height: 300px;
+    width: 40%;
+}
+span>img{
+    /* border: 1px solid red; */
+    height: 17px;
+    padding-top: 5px;
+}
+#guest>div>h2{
+    padding: 0px 50px;
+}
+#guest>h2{
+    padding: 0px 40px;
+}
+#line1{
+    border: 1px solid rgb(241, 238, 233);
+}
+#guest>div:nth-child(2) span{
+ padding: 0px 120px;
+}
+#guest>div:nth-child(4) span{
+ padding: 0px 84px;
+}
+#guest>div:nth-child(6) span{
+ padding: 0px 150px;
+}
+#guest>h2>span{
+    color: aqua;
+    
+}
+</style>
+<body>
+    <div id="start">
+    <h1>GO TO DALIY MART CLICK HERE..</h1>
+    </div>
+    <div id="line">
+    </div>
+
+    <div id="guest">
+        <h2><span>I</span> GUEST</h2>
+        <div>
+            <h2>Whistlist<span><img width="5%"src="https://images.dailyobjects.com/icons/arrow_left.png" alt=""></span></h2>
+        </div>
+        <div id="line1">
+        </div>
+
+        <div>
+            <h2>Help Center<span><img width="5%"src="https://images.dailyobjects.com/icons/arrow_left.png" alt=""></span></h2>
+        </div>
+        <div id="line1">
+        </div>
+        <div>
+            <h2>Login<span><img width="5%"src="https://images.dailyobjects.com/icons/arrow_left.png" alt=""></span></h2>
+        </div>
+        <div id="line1">
+        </div>
+
+        <div>
+
+        
+    </div>
+</body>
+<script>
+let guest=document.querySelector("#guest>div:nth-child(6)")
+guest.addEventListener('click',()=>{
+    window.location.assign('./sign.html')
+})
+</script>
+</html>

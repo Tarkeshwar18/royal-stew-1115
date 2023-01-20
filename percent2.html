@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ #percent1{
+    margin-top: 7%;
+ }
+ #first{
+    /* border: 1px solid red; */
+    height: 500px;
+    display: flex;
+   
+ }
+ #first>div{
+    /* border: 1px solid black; */
+    height: 500px;
+    width: 48%;
+    margin: auto; 
+  
+ }
+ #first>.sha{
+    height: 200px;
+    width: 30%;
+ }
+ video{
+    height: 100%;
+    width: 100%;
+ }
+ #second{
+    /* border: 1px solid red; */
+    height: 500px;
+    margin-top: 20px;
+    display: flex;
+   
+ }
+ #second>div{
+    /* border: 1px solid blue; */
+    height: 500px;
+    width: 42%;
+     margin: auto;  
+ }
+#second>.sk{
+    height: 200px;
+    width: 30%;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+#button{
+    /* border: 1px solid red; */
+    height: 100px;
+    width: 5%;
+    margin: auto;
+    margin-top: 80px;
+}
+#button>button{
+    width: 300%;
+    padding: 10px 20px;
+    color: white;
+    background-color: #20a87e;
+    border: none;
+    border-radius: 3px;
+}
+#button>button:hover{
+    background-color: aqua;
+}
+
+</style>
+<body>
+   <div id="percent1">
+    <img src="https://images.dailyobjects.com/marche/assets/images/other/republicsale-offer-page-desktop.png?tr=cm-pad_resize,v-2,w-1366,dpr-1" alt="percent">
+   </div>
+
+   <div id="first">
+    <div class="sha">
+        <p>Clean lines, contemporary design elements, and versatile storage options elevate the Swing Duffle Bag a notch above regular offerings. It has a one large compartment along with many pockets for extra storage and cotton newad carrying handles. Shop above 2499 and get this Duffle Bag for FREE!</p>
+    </div>
+    <div >
+        <video autoplay muted>
+            <source src="https://ik.imagekit.io/dailyobjects/assets/video/duffle-final.webm/ik-video.mp4?tr=f-webm,q-50,f-webm" type="video/mp4">
+          </video>
+    </div>
+   </div>
+
+   <div id="second">
+    <div>
+        <img  src="https://images.dailyobjects.com/marche/icons/hot-summer-sale-page-banner-wallet-update.png?tr=cm-pad_resize,v-2,w-578,dpr-1" alt="purse">
+     </div>
+     <div class="sk">
+      <p>Compact, light frame of the Log Bi-Fold Wallet forms a negligible profile in your pocket while keeping all your essential cash and cards safe. Shop now and get this Log Bi-Fold Wallet for FREE on all orders above 1999.</p>
+   </div>
+   </div>
+
+   <div id="button">
+    <button>CONTINUE SHOPPING</button>
+   </div>
+   
+  
+</body>
+<script>
+    let percent2=document.querySelector("#button")
+    percent2.addEventListener("click",()=>{
+        window.location.assign('./percent3.html')
+    })
+</script>
+</html>
