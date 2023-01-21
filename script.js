@@ -8,5 +8,5 @@ links.forEach(btn => btn.addEventListener("click",(e)=>{
   let percent=document.querySelector("#percent")
 
 percent.addEventListener("click",()=>{
-    window.location.assign('./percent2.html')
+    window.location.assign('./product.html')
 })
