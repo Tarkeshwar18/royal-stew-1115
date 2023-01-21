@@ -41,15 +41,14 @@ i{
     margin-right: 5px;
 }
 #search_result_div{
-
     width: 98%;
     margin-top: 20px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 15px;
-
 }
 .img-div{
     background-color: #f7f7f7;
@@ -93,5 +92,27 @@ p{
   }
   
   .button-grow:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+  }
+
+  @media screen and (min-width:400px) and (max-width:900px) {
+    #search_result_div{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    h4{
+        font-size: 15px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .button-grow {
+        font-size: 15px;
+        padding: 7px;
+      }
+      .button-grow:hover {
+        transform: scale(1.1);
+      }
   }
