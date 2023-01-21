@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.underline {
+    text-decoration: underline;
+}
+#nav {
+    width: 95%;
+    margin: auto;
+}
+#nav-top {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-top > div {
+    width: 50%;
+}
+#search {
+    width: 100%;
+    padding: 10px;
+}
+#nav-bottom {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-around;
+}
+#nav-bottom > p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+#signOut {
+    cursor: pointer;
+}
+#main {
+    width: 95%;
+    margin: auto;
+}
+#banner-1 {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#banner-1-image > img {
+    width: 100%;
+}
+#banner-1-text {
+    position: absolute;
+    text-align: center;
+    margin-top: -4%;
+    margin-left: -21%;
+}
+#banner-1-text > div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+#banner-1-text > h1 ~ p {
+    font-size: 21px;
+}
+#banner-2 {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    background-color: black;
+}
+#banner-2-image {
+    width: 50%;
+}
+#banner-2-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#banner-2-text {
+    width: 50%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#banner-2-text > h4 + p {
+    margin: 10px 0px;
+}
+#banner-3 {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#banner-3-image > img {
+    width: 100%;
+}
+#banner-3-text {
+    position: absolute;
+}
+#banner-3-text > h3 + p {
+    margin: 10px 0px;
+}
+#products {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+#products > .card > img {
+    width: 100%;
+}
+#products > .card > p {
+    margin-top: 10px;
+}
+#products > .card > div {
+    margin-top: 7px;
+}
+#products > .card > div > p + p {
+    margin: 8px 0px;
+}
+#banner-4 {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#banner-4-image > img {
+    width: 100%;
+}
+#banner-4-text {
+    color: white;
+    position: absolute;
+    text-align: center;
+}
+#banner-4-text > div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+#banner-4-text > h3 + p {
+    margin-top: 10px;
+}
+.hor-boxes {
+    margin-top: 80px;
+}
+.hor-boxes > img {
+    width: 100%;
+}
+.head2 {
+    text-align: center;
+    margin-top: 50px;
+}
+.head2-start {
+    margin-top: 100px;
+}
+.para {
+    text-align: center;
+    margin: 10px 0px;
+}
+.para-start {
+    margin: 10px 0px;
+}
+#gifts-by-price {
+    margin-top: 60px;
+}
+#gifts-by-price > img {
+    width: 100%;
+}
+#banner-5 {
+    margin-top: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#banner-5-image > img {
+    width: 100%;
+}
+#banner-5-text {
+    position: absolute;
+    display: flex;
+    margin-bottom: 25px;
+    color: white;
+}
+#banner-5-text > p {
+    margin-left: 25px;
+}
+#trending-now {
+    margin-top: 60px;
+    display: flex;
+    justify-content: end;
+}
+#trending-now-image > img {
+    width: 100%;
+    object-fit: contain;
+}
+#trending-now-text {
+    position: absolute;
+    margin-top: 140px;
+    margin-right: 40px;
+}
+#trending-now-text > h1 + p {
+    margin: 10px 0px;
+}
+#trending-now-text > div {
+    display: flex;
+    text-decoration: underline;
+}
+#trending-now-text > div > p {
+    margin-right: 25px;
+}
+#the-thread {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#the-thread > .card > img {
+    width: 100%;
+}
+#the-thread > .card > h2 {
+    margin: 10px 10px 15px 0px;
+}
+#services-and-events {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#services-and-events > .card > img {
+    width: 100%;
+}
+#services-and-events > .card > h2 {
+    margin-top: 7px;
+}
+#services-and-events > .card > h2 + p {
+    margin: 10px 10px 15px 0px;
+}
+#banner-6 {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#banner-6-image > img {
+    width: 100%;
+}
+#banner-6-text {
+    position: absolute;
+    color: white;
+    margin-left: 250px;
+}
+#banner-6-text > h2 + p {
+    margin: 10px 0px;
+}
+#shop-by-category {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+#shop-by-category > .card > h2 {
+    text-align: center;
+    margin-top: 7px;
+}
+#shop-by-category > .card > img {
+    width: 100%;
+}
+#currently-loving {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+#currently-loving > img {
+    width: 100%;
+}
+#trending-near-you {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+#trending-near-you > .card > img {
+    width: 100%;
+}
+#trending-near-you > .card > div {
+    margin-left: 15px;
+}
+#trending-near-you > .card > div > h3 + p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer {
+    padding-top: 30px;
+    padding-bottom: 25px;
+    background-color: #f9f9f9;
+}
+#footer-top {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#footer-top > div > h3 {
+    margin-bottom: 20px;
+}
+#footer-top > div > p {
+    margin-bottom: 20px;
+}
+#footer-bottom {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+}
+#india {
+    display: flex;
+}
+#india > img {
+    border-radius: 50%;
+}
+#india > p {
+    margin-left: 10px;
+}
+#footer-bottom > p {
+    margin-right: 50px;
+}

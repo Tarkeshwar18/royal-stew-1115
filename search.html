@@ -126,7 +126,9 @@
 
             let descreption = document.createElement("p");
             descreption.innerText = ele.descreption;
-            detail_div.append(price,descreption)
+            let btn=document.createElement("button");
+            btn.innerText="Add To Cart"
+            detail_div.append(price,descreption,btn)
 
             card.append(imgdiv,detail_div)
             card_list.append(card)
