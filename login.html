@@ -18,8 +18,9 @@
 #guest{
     margin-top: 100px;
     /* border: 1px solid blueviolet; */
-    height: 300px;
-    width: 40%;
+    height: 500px;
+    width: 90%;
+    display: flex;
 }
 span>img{
     /* border: 1px solid red; */
@@ -35,18 +36,63 @@ span>img{
 #line1{
     border: 1px solid rgb(241, 238, 233);
 }
-#guest>div:nth-child(2) span{
+#guest>div>div:nth-child(2) span{
  padding: 0px 120px;
 }
-#guest>div:nth-child(4) span{
+#guest>div>div:nth-child(4) span{
  padding: 0px 84px;
 }
-#guest>div:nth-child(6) span{
+#guest>div>div:nth-child(6) span{
  padding: 0px 150px;
 }
-#guest>h2>span{
+#guest>div>h2>span{
     color: aqua;
-    
+}
+#start>h1{
+    cursor: pointer;
+}
+#guest>div>div:nth-child(6){
+    cursor: pointer;
+}
+#guest>div:nth-child(4) h1{
+    /* background-color: aqua; */
+    display: none;
+}
+#guest>div{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 0px 70px;
+}
+#mid{
+    text-align: center;
+}
+#guest>#nike>div:nth-child(1) span{
+    padding: 0px 160px;
+}
+#guest>#nike>div:nth-child(3) span{
+    padding: 0px 50px;
+    /* background-color: aqua; */
+}
+#guest>#nike>div:nth-child(5) span{
+    padding: 0px 30px;
+    /* background-color: aqua; */
+}
+#guest>#nike{
+    display: none;
+}
+#first{
+    border: 1px solid rgb(241, 238, 233);  
+   
+}
+#osa{
+    display: none; 
+    /* background-color: aqua; */
+}
+#kick{
+    display: none;
+}
+#rest{
+    display: none;
 }
 </style>
 <body>
@@ -55,8 +101,15 @@ span>img{
     </div>
     <div id="line">
     </div>
+    <div id="mid">
+        <h1> MY ACCOUNT</h1>
+    </div>
+    <div id="first">
+
+    </div>
 
     <div id="guest">
+        <div>
         <h2><span>I</span> GUEST</h2>
         <div>
             <h2>Whistlist<span><img width="5%"src="https://images.dailyobjects.com/icons/arrow_left.png" alt=""></span></h2>
@@ -69,21 +122,130 @@ span>img{
         </div>
         <div id="line1">
         </div>
+         
         <div>
             <h2>Login<span><img width="5%"src="https://images.dailyobjects.com/icons/arrow_left.png" alt=""></span></h2>
         </div>
         <div id="line1">
         </div>
-
-        <div>
-
+        </div>
         
+     <!-- experiment -------------------------------------------------->
+     <div id="nike">
+      
+     <div>
+        <h2>ORDER<span><img width="5%"src="https://images.dailyobjects.com/icons/arrow_left.png" alt=""></span></h2>
+   <!----------------------------------------------------- experiment ---------------------------------------------------->
+       <div id="osa">
+        <div>
+            <p>How can I Cancel my Order?</p>
+        </div>
+        <div>
+            <p>Are there any Cancellation Charges?</p>
+        </div>
+        <div>
+            <p>What is the return process and how long does it take?</p>
+        </div>
+        <div>
+            <p>What is the return policy of DailyObjects?</p>
+        </div>
+        <div>
+            <p>I have received a damaged/defective/wrong product. What should I do?</p>
+        </div>
+       </div>
+
+    </div>
+    <div id="line1">
+    </div>
+
+    <div>
+        <h2>PAYMENT&REFUND<span><img width="5%"src="https://images.dailyobjects.com/icons/arrow_left.png" alt=""></span></h2>
+          <!------------------------------------------- experiment ----------------------------------------------------------->
+          <div id="kick">
+            <div>
+                <p>What do I do if the payment has failed?</p>
+            </div>
+            <div>
+                <p>When will I get my refund for the order cancelled?</p>
+            </div>
+            <div>
+                <p>Where will the refund be credited?</p>
+            </div>
+            <div>
+                <p>What amount Will I be refunded if I used a coupon code while placing my order, but have to cancel?</p>
+            </div>
+           
+           </div>
+   
+        </div>
+    <div id="line1">
+    </div>
+     
+    <div>
+        <h2>CANCELLATION & RETURNS<span><img width="5%"src="https://images.dailyobjects.com/icons/arrow_left.png" alt=""></span></h2>
+    
+        <div id="rest">
+            <div>
+                <p>How can I Cancel my Order?</p>
+            </div>
+            <div>
+                <p>Are there any Cancellation Charges?</p>
+            </div>
+            <div>
+                <p>What is the return process and how long does it take?</p>
+            </div>
+            <div>
+                <p>What is the return policy of DailyObjects?</p>
+            </div>
+             <div>
+                <p>I have received a damaged/defective/wrong product. What should I do?</p>
+             </div>
+           </div>
+    
+    </div>
+    <div id="line1">
+    </div>
+  </div>
     </div>
 </body>
+
+
 <script>
-let guest=document.querySelector("#guest>div:nth-child(6)")
+    
+let guest=document.querySelector("#guest>div>div:nth-child(6)")
 guest.addEventListener('click',()=>{
     window.location.assign('./sign.html')
 })
+
+let start=document.querySelector('#start>h1')
+start.addEventListener('click',()=>{
+    window.location.assign('./sign.html')
+})
+
+let help=document.querySelector('#guest>div>div:nth-child(4) h2')
+help.addEventListener('click',(e)=>{
+    e.preventDefault()
+ document.querySelector('#guest>#nike').style.display='block' 
+})
+
+let second=document.querySelector('#nike>div:nth-child(1)')
+second.addEventListener('click',(e)=>{
+ e.preventDefault();
+ document.querySelector('#osa').style.display='block'
+})
+
+let third=document.querySelector('#guest>#nike>div:nth-child(3)')
+third.addEventListener('click',(e)=>{
+    e.preventDefault();
+document.querySelector('#kick').style.display='block'
+})
+
+let four=document.querySelector('#guest>#nike>div:nth-child(5)')
+four.addEventListener('click',(e)=>{
+    e.preventDefault();
+document.querySelector('#rest').style.display='block'
+})
+
+
 </script>
 </html>

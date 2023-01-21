@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding:none;
+        margin: none;
+    }
+#oso{
+    border: 1px solid rgb(247, 247, 248);
+    height: 700px;
+    background-color:#f0e5e5; 
+}
+#oso>div{
+ background-color: whitesmoke;
+   border: 1px solid turquoise;
+   box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px; ;
+   height: 340px;
+   width: 35%;
+   margin: auto;
+}
+#oso>div{
+    margin-top: 200px;
+    border-radius: 10px;
+}
+#oso div{
+    text-align: center;
+    
+}
+#oso>div>#signUp>input{
+    /* background-color: aqua; */
+    height: 25px;
+    border:0.5px solid turquoise ;
+    border-radius: 8px;
+   width: 55%;
+  padding-top: 5px;
+}
+#oso>div>#signUp:nth-child(n) input{
+   margin-top: 5px;
+}
+#oso>button{
+        justify-content: end;
+        background-color: aqua;
+        text-align: center;
+}
+#container>div{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    margin-bottom: -80px;
+    padding: 0px 60px;
+}
+#container>div>button{
+  padding: 7px 20px;
+  border:0.5px solid turquoise ;
+  border-radius: 8px;
+  color: darkgreen;
+}
+#container>div>button:hover{
+ color: rgb(87, 165, 165);
+ background-color: #e7dedf;
+}
+#oso>div>#signIn>input{
+    height: 25px;
+    border:0.5px solid turquoise ;
+    border-radius: 8px;
+   width: 55%;
+  padding-top: 5px;
+}
+#oso>div>#signIn:nth-child(n) input{
+   margin-top: 8px;
+}
+</style>
+<body>
+    <div id="container">
+        <div>
+        <button>Sign Up</button>
+        <button>Sign In</button>
+        </div>
+    </div>
+    <div id="oso"> 
+      <div>
+        <form id="signUp">
+            <h2><i>WELCOME TO DALIY MART</i></h2>
+            <h3>CREATE ACCOUNT</h3>
+            <p>Sign Up!</p>
+            <input type="text" id="name" placeholder="Name" required />
+            <br />
+            <input type="email" id="email" placeholder="E-mail" required />
+            <br />
+            <input type="password" id="password" placeholder="Password" required />
+            <br />
+            <input
+              type="password"
+              id="passwordChk"
+              placeholder="Re-enter Password"
+              required
+            />
+            <br />
+            <input type="submit" />
+          </form>
+          <form id="signIn">
+            <h2><i>ONE MORE STEP TO DAILY MART..</i></h2>
+            <h3>Sign In!</h3>
+            <input type="email" id="email1" placeholder="E-mail" required />
+            <br />
+            <input type="password" id="password1" placeholder="Password" required />
+            <br />
+            <input type="submit" />
+          </form>
+      </div>
+    </div>
+</body>
+<script>
+  let loginBtn = document.querySelector("div>button:nth-child(2)");
+  let signUpBtn = document.querySelector("div>button:nth-child(1)");
+  let signIn = document.querySelector("#signIn");
+  let signUp = document.querySelector("#signUp");
+
+
+  let users = JSON.parse(localStorage.getItem("usersData")) || [];
+  signIn.style.display = "none";
+
+  loginBtn.addEventListener("click", function () {
+    signUp.style.display = "none";
+    signIn.style.display = "block";
+    document.title = "Sign In";
+  });
+  signUpBtn.addEventListener("click", function () {
+    signIn.style.display = "none";
+    signUp.style.display = "block";
+    document.title = "Sign Up";
+  });
+
+  signUp.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let count = 0;
+    users.forEach(function (el) {
+      if (el.email === signUp.email.value) {
+        count++;
+      }
+    });
+    if (count > 0) {
+      alert("user already registered!");
+    }
+    else {
+      if (signUp.password.value != signUp.passwordChk.value) {
+        alert("passwords do not match!");
+      } else {
+        let user = {
+          name: signUp.name.value,
+          email: signUp.email.value,
+          password: signUp.password.value,
+        };
+        users.push(user);
+        localStorage.setItem("usersData", JSON.stringify(users));
+        alert("Sign Up successful!");
+        signUp.reset();
+      }
+    }
+  });
+
+  signIn.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let count = 0;
+    let temp;
+    users.forEach(function (el) {
+      if (el.email === signIn.email1.value) {
+        count++;
+        temp = el;
+        localStorage.setItem('loggedUser',JSON.stringify(el));
+      }
+    });
+    if (count == 0) {
+      alert("user not registered!");
+    }
+     else {
+      if (temp.password != signIn.password1.value) {
+        alert("wrong password");
+      } else {
+        alert("login successful!");
+        window.location.assign("./index.html");
+      }
+    }
+  });
+</script>
+</html>
