@@ -224,10 +224,11 @@ button{
 }
 .banner{
     width: 100%;
+    margin-top: 30px;
 }
 .banner img{
     width: 100%;
-    margin-top: -43px;
+    margin-top: 25px;
 }
 .home-btn{
     background-color: #66BB6A;
