@@ -5,10 +5,127 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Mart</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="products.css">
 </head>
 <body>
+    <!------------------------- Navbar code starts here ------------------------->
+    <nav>
+        <div id="nav-container">
+            <div id="nav-logo">
+                <a href="./index.html"><img src="./images/daily-mart-logo (1).png" alt=""></a>
+                
+            </div>
+            <div id="nav-links">
+                <div id="new-arrivals-container">
+                    <a id="new-arrivals-link" href="">NEW ARRIVALS</a>
+                    <div id="new-arrivals-dropdown">
+                        <div id="new-arrivals-dropdown-left">
+                            <h4>NEW ARRIVALS</h4>
+                            <a href="">Pedal Backpack</a>
+                            <a href="">Phone Cases</a>
+                            <a href="">Charging Solutions</a>
+                            <a href="">Macbook Sleenes</a>
+                            <a href="">Messenger Bags</a>
+                            <a href="">Eyewear Cases</a>
+                            <a href="">Watchbands</a>
+                            <a href="">Collections</a>
+                        </div>
+                        <div id="new-arrivals-dropdown-right">
+                            <img src="https://images.dailyobjects.com/marche/assets/images/other/recess-collection-dropdown-image-for-new-arrival.jpg" alt="">
+                            <img src="https://images.dailyobjects.com/marche/assets/images/other/planner-dropdown-image-for-new-arrival-2-new.jpg" alt="">
+                            <img src="https://images.dailyobjects.com/marche/assets/images/other/new-watch-chargers-dropdown-image-for-new-arrival-update.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="cases-sleeves-container">
+                    <a id="cases-sleeves-link" href="">CASES & SLEEVES</a>
+                    <div id="cases-sleeves-dropdown">
+                        <div id="cases-sleeves-dropdown-left">
+                            <h4>CASES & SLEEVES</h4>
+                            <a href="">Phone Cases</a>
+                            <a href="">Laptop Sleeves</a>
+                            <a href="">Macbook Sleeves</a>
+                            <a href="">Airpods Case Cover</a>
+                            <a href="">Ipad Covers & Sleeves</a>
+                            <a href="">Passport Wallets</a>
+                            <a href="">Eyewear Cases</a>
+                            <a href="">Airtag Cases</a>
+                            <a href="">Apple Tv Remote Cases</a>
+                        </div>
+                        <div id="cases-sleeves-dropdown-right">
+                            <img src="https://images.dailyobjects.com/marche/icons/category/eyewear-cases.png" alt="">
+                            <img src="https://images.dailyobjects.com/marche/icons/category/cases-sleeves-intermediate-image.jpg" alt="">
+                            <img src="https://images.dailyobjects.com/marche/assets/images/other/new-watch-chargers-dropdown-image-for-new-arrival-update.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="accessories-container">
+                    <a id="accessories-link" href="">ACCESORIES</a>
+                    <div id="accessories-dropdown">
+                        <div id="accessories-dropdown-left">
+                            <h4>ACCESORIES</h4>
+                            <a href="">Charging Solutions</a>
+                            <a href="">Watch Bands</a>
+                            <a href="">Stands</a>
+                            <a href="">Drinkware</a>
+                            <a href="">Screen Guards</a>
+                            <a href="">Phone Wallets</a>
+                            <a href="">Organisers</a>
+                            <a href="">Masks</a>
+                            <a href="">Keychains</a>
+                        </div>
+                        <div id="accessories-dropdown-right">
+                            <img src="https://images.dailyobjects.com/marche/assets/images/other/new-watch-chargers-dropdown-image-for-new-arrival-update.jpg" alt="">
+                            <img src="https://images.dailyobjects.com/marche/assets/images/other/charging-solution-icon.jpg" alt="">
+                            <img src="https://images.dailyobjects.com/marche/tmp/organiser-main.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="sale-container">
+                    <a id="sale-link" href="">SALE</a>
+                    <div id="sale-dropdown">
+                        
+                    </div>
+                </div>
+                <div id="bags-wallets-container">
+                    <a id="bags-wallets-link" href="">BAGS & WALLETS</a>
+                    <div id="bags-wallets-dropdown">
+
+                    </div>
+                </div>
+                <div id="home-office-container">
+                    <a id="home-office-link" href="">HOME OFFICE</a>
+                    <div id="home-office-dropdown">
+
+                    </div>
+                </div>
+                <div id="collections-container">
+                    <a id="collections-link" href="">COLLECTION</a>
+                    <div id="collections-dropdown">
+
+                    </div>
+                </div>
+            </div>
+            <div id="nav-icons">
+                <a href="cart.html">
+                    <i class="fa fa-bag-shopping"></i>
+                  </a>
+                  <a href="login.html">
+                    <i class="fa fa-user"></i>
+                  </a>
+                  <a href="search.html">
+                    <i class="fa fa-magnifying-glass"></i>
+                  </a>
+            </div>
+        </div>
+    </nav>
+    <!------------------------- Navbar code ends here ------------------------->
+
     <div id="category-banner">
         <img src="https://images.dailyobjects.com/marche/assets/images/other/republicsale-home-page-desktop.png" alt="">
     </div>
@@ -245,6 +362,7 @@
     </footer>
     <!------------------------- footer code ends here ------------------------->
 
+    <script src="navbar.js"></script>
     <script src="./products.js"></script>
     <script>
         var url = `https://63c788db5c0760f69ab9188f.mockapi.io/products?category=bag`;

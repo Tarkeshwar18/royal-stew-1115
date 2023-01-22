@@ -25,7 +25,7 @@ data.forEach((el,index)=>{
       brand.textContent=el.title;
 
       let price=document.createElement("h3");
-      price.textContent=`${el.price}`;
+      price.textContent=`Rs.${el.price}`;
       
      
 

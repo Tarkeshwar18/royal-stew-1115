@@ -37,9 +37,19 @@
     color:#20A87E;
 }
 
-.fa{
+.nav-icon .fa{
     margin-left: 15px;
     margin-right: 15px;
+    margin-top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.bars{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
 }
 .nav-icon{
     display: flex;
@@ -182,6 +192,14 @@ sup{
 #one{
     margin:20px 20px 50px 40px;
 }
+.navebar .nav-icon{
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    display: block;
+}
 .cont1{
     width: 100%;
     margin-top: 60px;
@@ -206,9 +224,11 @@ button{
 }
 .banner{
     width: 100%;
+    margin-top: 30px;
 }
 .banner img{
     width: 100%;
+    margin-top: 25px;
 }
 .home-btn{
     background-color: #66BB6A;
@@ -402,9 +422,12 @@ i{
 /* .....................................................   MEDIA QUERY   ............................................................. */
 
 @media screen and (min-width:400px) and (max-width:900px) {
+
     .navbar{
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        display: flex;
+
     }
     .navbar .logo{
         width: 20%;
@@ -412,15 +435,16 @@ i{
     .menu{
         display: none;
     }
-    .nav-icon{
-        font-size: 35px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15px;
-    }
     .nav-icon i{
         font-size: 30px;
+    }
+    .nav-icon .fa{
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
     }
     #slideshowCont{
         height:300px
@@ -481,10 +505,29 @@ i{
     .studio_div h3{
        font-size: 18px;
     }
+    #studio{
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+    .studio_div{
+        width: 100%;
+    }
+    .studio_div .home-btn{
+        text-align: center;
+        font-size: 15px;
+    }
     #top{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    .bars{
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
     }
     .top-div-name{
         width: 100%;
@@ -499,6 +542,9 @@ i{
     .home-btn{
         font-size: 10px;
         padding: 8px;
+    }
+    .top-div-name .home-btn{
+        font-size: 15px;
     }
     #bottom{
         width: 100%;
@@ -519,9 +565,17 @@ i{
         margin: 15px;
     }
     .bottom-div p{
-        font-size: 12px;
-        text-align: center;
+        font-size: 10px;
+        text-align: start;
         margin: 10px;
+    }
+    #icons img {
+        width: 40%;
+        margin-left: 10px;
+    }
+    footer > #get-exclusive-offers > #icons > div {
+        display: block;
+        align-items: center;
     }
     .bottom-img{
         width: 100%;
