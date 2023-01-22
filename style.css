@@ -427,17 +427,19 @@ i{
         justify-content: space-between;
         align-items: center;
         display: flex;
-
     }
     .navbar .logo{
         width: 20%;
     }
+
     .menu{
         display: none;
     }
+
     .nav-icon i{
         font-size: 30px;
     }
+
     .nav-icon .fa{
         margin-left: 15px;
         margin-right: 15px;
@@ -446,9 +448,11 @@ i{
         cursor: pointer;
         display: none;
     }
+
     #slideshowCont{
         height:300px
     }
+    
     .name_recess{
         bottom: 20px;
         left: 10px;
