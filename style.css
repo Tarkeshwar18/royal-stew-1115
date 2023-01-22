@@ -263,7 +263,6 @@ button{
     margin-left: 45px;
     margin-bottom: 35px;
 }
-
 img{
     width: 100%;
 }
@@ -403,7 +402,6 @@ i{
 /* .....................................................   MEDIA QUERY   ............................................................. */
 
 @media screen and (min-width:400px) and (max-width:900px) {
-
     .navbar{
         justify-content: space-around;
         align-items: center;
@@ -516,13 +514,13 @@ i{
         padding: 10px;
     }
     .bottom-div h1{
-        font-size: 12px;
+        font-size: 15px;
         text-align: center;
         margin: 15px;
     }
     .bottom-div p{
-        font-size: 10px;
-        text-align: start;
+        font-size: 12px;
+        text-align: center;
         margin: 10px;
     }
     .bottom-img{

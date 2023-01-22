@@ -13,7 +13,7 @@
 <body>
     <div class="navbar">
         <div class="logo">
-          <a href="">
+          <a href="index.html">
             <img
               src="./images/daily-mart-logo (1).png"
               alt=""
@@ -305,7 +305,7 @@
           </div>
         </div>
         <div class="nav-icon">
-          <a href="">
+          <a href="cart.html">
             <i class="fa fa-bag-shopping"></i>
           </a>
           <a href="login.html">
@@ -429,9 +429,6 @@
             image.setAttribute("src",ele.image);
             imgdiv.append(image);
 
-            let title = document.createElement("h2");
-            title.innerText = ele.title;
-
             let detail_div=document.createElement("div");
             detail_div.setAttribute("class","detail_div")
             let price = document.createElement("h4");
@@ -444,16 +441,12 @@
             btn.innerText="Add To Cart"
             console.log("ele",ele)
             
-            // <----------------------experiment------------------------------------------------------------------->
+            // <----------------------add product into cart------------------------------------------------------------------->
           let flag=false;
           btn.addEventListener("click",(el)=>{
-            // console.log("el",el)
-            // let cartdata=JSON.parse(localStorage.getItem("cart"))||[];
             for(let i=0;i<cartdata.length;i++){
-                // console.log("cartdata[i].title==ele.title",cartdata[i].title,ele.title,cartdata[i].title==ele.title)
               if(cartdata[i].title==ele.title){
                 flag=true;
-                // break;
               }
             }
             if(flag==true){
@@ -464,15 +457,12 @@
                localStorage.setItem("cart",JSON.stringify(cartdata));
              alert("Product Added To Cart");
              
-            }
-
-            // cartdata.push({...ele,quantity:1});
-            // localStorage.setItem("cart",JSON.stringify(cartdata));
-            // alert("Product Added To Cart");
-             
-           
+            }   
           })
-            detail_div.append(title,price,descreption,btn)
+          let title = document.createElement("h2");
+            title.innerText = ele.title;
+
+            detail_div.append(price,descreption,btn,title)
             card.append(imgdiv,detail_div)
             card_list.append(card)
             main.append(card_list);
