@@ -1,12 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
-    <link rel="stylesheet" href="search.css" class="css">
-    <link rel="stylesheet" href="style.css">
+    <title>watchband</title>
+    <link rel="stylesheet" href="watchband.css" class="css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+            <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" class="css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Mulish:wght@700&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
@@ -22,7 +32,7 @@
         </div>
         <div class="menu">
           <div class="New_arrivals wdc-btn active">
-            <a id="new-arrivals-link" href="">NEW ARRIVALS</a>
+            <a href="https://www.google.com/" target="_blank">NEW ARRIVALS</a>
             <div class="dropdown section-2">
               <div class="hour-sub-menu">
                 <h3>NEW ARRIVALS</h3>
@@ -47,7 +57,7 @@
             </div>
           </div>
           <div class="cases-sleeves wdc-btn">
-            <a id="cases-sleeves-link" href="">CASES & SLEEVES</a>
+            <a href="">CASES & SLEEVES</a>
             <div class="dropdown section-2">
               <div class="hour-sub-menu">
                 <h3>CASES</h3>
@@ -131,7 +141,7 @@
             </div>
           </div>
           <div class="accesories wdc-btn">
-            <a id="accessories-link" href="">ACCESORIES</a>
+            <a href="">ACCESORIES</a>
             <div class="dropdown section-2">
               <div class="hour-sub-menu">
                 <h3>CASES</h3>
@@ -164,7 +174,7 @@
             </div>
           </div>
           <div class="sales wdc-btn">
-            <a id="sale-link" href="">SALE</a>
+            <a href="">SALE</a>
             <div class="dropdown section-2">
               <div class="hour-sub-menu">
                 <h3>CASES</h3>
@@ -197,7 +207,7 @@
             </div>
           </div>
           <div class="bags wdc-btn">
-            <a id="bags-wallets-link" href="">BAGS & WALLETS</a>
+            <a href="">BAGS & WALLETS</a>
             <div class="drop-bags">
               <div class="row1">
   
@@ -205,7 +215,7 @@
             </div>
           </div>
           <div class="home-office wdc-btn">
-            <a id="home-office-link" href="">HOME OFFICE</a>
+            <a href="">HOME OFFICE</a>
             <div class="dropdown section-2">
               <div class="hour-sub-menu">
                 <h3>CASES</h3>
@@ -238,7 +248,7 @@
             </div>
           </div>
           <div class="collections wdc-btn">
-            <a id="collections-link" href="">COLLECTION</a>
+            <a href="">COLLECTION</a>
             <div class="dropdown section-2">
               <div class="hour-sub-menu">
                 <h3>CASES</h3>
@@ -316,133 +326,70 @@
           </a>
         </div>
       </div>
-
-
-    <div class="search_bar">
-        <div id="search_input">
-            <!-- <h5>Search</h5> -->
-            <div class="main_search">
-                <input type="text" placeholder="Search" id="product_searchBar">
-                <i class="fa-solid fa-magnifying-glass" id="seach-icon" onclick="filter()"></i>
-            </div> 
-        </div>
+    
+    <div id="percent">
+        <img src="https://images.dailyobjects.com/marche/assets/images/other/republicsale-home-page-desktop.png?tr=cm-pad_resize,v-2,w-1349,dpr-1" alt="percent">
     </div>
-    <div class="sortDiv">
-       <button id="lowTohigh" class="button-grow">Low To High</button>
-       <button id="highTolow" class="button-grow">High To Low</button>
+    <div class="watchband">
+        <h1>Watch Brands</h1>
     </div>
-    <div id="search_result_div">
+
+    <div id="watchproduct">
 
     </div>
 </body>
 </html>
 <script>
-    // ............................................search page functionality .....................................................
 
-    let url =  "https://63c788db5c0760f69ab9188f.mockapi.io/products";
+let url =  "https://63c788db5c0760f69ab9188f.mockapi.io/products";
+let mainSection = document.getElementById("watchproduct");
 
-    let icon = document.getElementById("seach-icon");
-    let main = document.getElementById("search_result_div");
-    let sorting = document.getElementById("sortByprice");
-    let lowTohigh = document.getElementById("lowTohigh");
-    let highTolow = document.getElementById("highTolow");
-    let new_data = []
-    let productList = []
-    let sortList = []
+window.addEventListener("load",()=>{
+    fetchDatafromServer()
+})
+
+function fetchDatafromServer(){
     fetch(url)
-    .then(res => res.json())
-    .then((data)=>{
-        
-        productList = data.map((item)=>{
-           return{
-            image: `${item.image}`,
-            title:item.title,
-            descreption: item.descreption,
-            category:item.category,
-            price:item.price
-           }
-        })
-        sortList=productList
-    })
+    .then(res=> res.json() )
+    .then(data=> {
+        console.log(data)
+
+        watchdata = data.filter((item)=>{
+         return item.category === "watch"
+         })
+        console.log("wwww",watchdata);
+        displayData(watchdata)
+    })     
+}
 
 
+function displayData(watchdata){
+    let watchlist = `
+    <div class="card-list">
+    ${watchdata.map(item => getCard(item.title, item.price, item.descreption, item.image)).join(" ")}
+    </div>
+    `
+
+    mainSection.innerHTML = watchlist;
+}
+
+function getCard(title,price, descreption, imageLink){
+    let card =`
+    <div id="card-list1">
+    <div class="img-div" >
+    <img src= ${imageLink} alt="cat" />
+    </div>
+    <div class="detail_div">
+    <h4 class="card-item card-title"> ${title} </h4>
+    <div class = "card-item card-description">${descreption} 
+    </div>
+    <div class="card-price">Rs.
+    ${price} </div>
+    </div>
+    </div>
+    `
     
-    lowTohigh.addEventListener("click",()=>{
-            main.innerHTML=null
-           let sortarr = new_data.sort((a,b)=>{
-            if(a===b){
-                return 0;
-            }
-            else{
-                return +(a.price) < +(b.price) ? -1 : 1;
-            }
-           })
-       
-           filterDataclick(sortarr);
-        
-    });
-    highTolow.addEventListener("click",()=>{
-            main.innerHTML=null
-           let sortarr = new_data.sort((a,b)=>{
-            if(a===b){
-                return 0;
-            }
-            else{
-                return +(b.price) < +(a.price) ? -1 : 1;
-            }
-           })
-          
-           filterDataclick(sortarr);
-        
-    });
-
-    function filter(){
-        let searchValue = document.getElementById("product_searchBar").value;
-        main.innerHTML = null;
-
-        new_data = productList.filter((item,ind)=>{
-         if(searchValue.toLowerCase() === item.category.toLowerCase()){
-             return item.category.trim().toLowerCase().includes(searchValue.trim().toLowerCase())
-         }
-        })
-        filterDataclick(new_data)
-
-    }
-    
-
-    function filterDataclick(new_data){
-
-        new_data.forEach(ele=>{
-            let card_list = document.createElement("div");
-            card_list.setAttribute("id","card-list");
-
-            let card = document.createElement("div");
-            card.setAttribute("class","productCard")
-
-            let imgdiv=document.createElement("div");
-            imgdiv.setAttribute("class","img-div")
-
-            let image = document.createElement("img");
-            image.setAttribute("src",ele.image);
-            imgdiv.append(image);
-
-            let detail_div=document.createElement("div");
-            detail_div.setAttribute("class","detail_div")
-            let price = document.createElement("h4");
-            price.innerText="Rs. "+ ele.price;
-
-            let descreption = document.createElement("p");
-            descreption.innerText = ele.descreption;
-            let btn=document.createElement("button");
-            btn.setAttribute("class","home-btn")
-            btn.innerText="Add To Cart"
-            detail_div.append(price,descreption,btn)
-
-            card.append(imgdiv,detail_div)
-            card_list.append(card)
-            main.append(card_list);
-        })
-    }
-   
+    return card
+}
 
 </script>

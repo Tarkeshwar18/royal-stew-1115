@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navbar{
+    width: 100%;
+    height: 85px;
+    display: flex;
+    border-bottom: 1px solid rgb(190, 187, 187);
+}
+.navbar .logo{
+    width: 10%;
+    text-align: left;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.logo img{
+    width: 80%;
+    margin-left: 10px;
+}
+.menu{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin-bottom: 12px;
+    font-family: serif;
+}
+
+.active, .wdc-btn a:hover{
+    color:#20A87E;
+}
+
+.fa{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.nav-icon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 17px;
+}
+.nav-icon a{
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: black;
+}
+.wdc-btn a{
+    color: black;
+    text-decoration: none;
+    font-size: 700;
+}
+.sales a{
+    color: red;
+}
+.dropdown .hour-sub-menu a{
+    display: block;
+    line-height: 1.5;
+    color: black;
+    text-decoration: none;
+    /* width: 30%; */
+    border-right: 1px solid grey;
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1 ;
+    width: 130%;
+    height: auto;
+    padding: 20px;
+    /* margin-top: 25px; */
+    margin-left: -170px;
+    background-color: white;
+}
+.dropdown .images{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.cases-sleeves .dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1 ;
+    width: 130%;
+    height: auto;
+    padding: 20px;
+    margin-left: -280px;
+    background-color: white;
+}
+
+.cases-sleeves .hour-sub-menu {
+    width: 60%;
+    margin-left: 50px;
+}
+.cases-sleeves .poster-dopdown{
+    width: 20%;
+    height: auto;
+}
+.poster-dopdown img{
+    width: 100%;
+    height: 500px;
+} 
+
+.dropdown .images a img{
+    width: 70%;
+}
+.New_arrivals:hover .dropdown{
+    display: flex;
+}
+.cases-sleeves:hover .dropdown{
+    display: flex;
+}
+.dropdown .hour-sub-menu .sub-menu div a{
+    border-right: none;
+}
+.dropdown .hour-sub-menu .sub-menu{
+    width: 100%;
+    display: flex;
+    text-align:left ;
+    justify-content: space-evenly;
+    border-right: 1px solid grey;
+}
+.dropdown .hour-sub-menu .sub-menu div{
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+sup{
+    color: red;
+}
+#watchproduct{
+    width: 80%;
+    margin: auto;
+}
+.watchband{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.watchband h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+#search_result_div{
+    width: 98%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px
+}
+.img-div{
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:400px
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+.card-description{
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.detail_div{
+    margin-top: 10px;
+}
+.card-price{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
