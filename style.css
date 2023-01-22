@@ -410,15 +410,10 @@ i{
     }
     .navbar .logo{
         width: 20%;
-        /* height: 25px; */
     }
     .menu{
         display: none;
     }
-    /* .fa{
-        margin-left: 20px;
-        margin-right: 20px;
-    } */
     .nav-icon{
         font-size: 35px;
         display: flex;
@@ -441,5 +436,99 @@ i{
     i{
         font-size: 15px;
         margin-left: 10px;
+    }
+    #mid-unit{
+        width: 90%;
+        margin: auto;
+    }
+    #mid-unit .part-1{
+        margin-left: 0px;
+       }
+       #mid-unit .part-1 h1{
+        font-size: 20px;
+       }
+       #mid-unit .part-1 p{
+        font-size: 10px;
+       }
+       #mid-unit .splide{
+        width: 60%;
+        place-items: center;
+    }
+    .splide__track{
+        width: 95%;
+        height: 150px;
+        margin: auto;
+    }
+    
+    .splide__slide{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .img_box>img{
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .img16{
+        height: 150px;
+    }
+    .studio-name{
+        margin: 20px 0px 20px 50px;
+        font-size: 13px;
+    }
+    .studio_div img{
+        height: 60%;   
+    }
+    .studio_div h3{
+       font-size: 18px;
+    }
+    #top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .top-div-name{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+    .top-div-name h3{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .home-btn{
+        font-size: 10px;
+        padding: 8px;
+    }
+    #bottom{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bottom-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+    .bottom-div h1{
+        font-size: 12px;
+        text-align: center;
+        margin: 15px;
+    }
+    .bottom-div p{
+        font-size: 10px;
+        text-align: start;
+        margin: 10px;
+    }
+    .bottom-img{
+        width: 100%;
+    }
+    #studio{
+        margin-bottom: 60px;
     }
 }
