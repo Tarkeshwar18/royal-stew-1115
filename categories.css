@@ -16,16 +16,36 @@
     padding: 40px 0px 100px 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px 70px;
+    gap: 30px;
+    /* border: 1px solid lightgrey; */
 }
 #categories-container > #categories > div {
+    width: 160px;
+    margin: auto;
     cursor: pointer;
+    /* border: 1px solid lightgrey; */
 }
 #categories-container > #categories > div img {
     width: 100%;
     border-radius: 50%;
 }
 #categories-container > #categories > div > h3 {
+    font-size: 18px;
     margin-top: 7px;
     text-align: center;
+}
+@media screen and (min-width: 781px) and (max-width: 1050px) {
+    #categories-container > #categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 501px) and (max-width: 780px) {
+    #categories-container > #categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 500px) {
+    #categories-container > #categories {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
