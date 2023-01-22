@@ -1,0 +1,66 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  form {
+  display: flex;
+  color: white;
+  font-family: system-ui;
+  flex-direction: column;
+  background: linear-gradient(45deg, #3c3043, #4c3d55 , transparent);
+  gap: 20px;
+  padding: 30px 50px;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+form h2{ 
+    margin: 5px 0; }
+  #btn {
+    margin: auto;
+    padding: 5px 20px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+  #btn:hover{
+    background-color: white;
+    color:  #3c3043 ;
+  }
+
+  #page {
+    width: 600px;
+    margin: auto;
+
+    border-radius: 20px;
+
+  }
+
+  input {
+  font-size: 25px;
+  border-radius: 6px;
+  padding: 5px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+input::placeholder{
+color:  #3c3043;
+
+}
+
+  .line {
+    display: flex;
+    gap: 10px;
+
+  }
+
+
+  #head {
+    text-align: center;
+    color: teal;
+    font-size: 40px;
+    text-decoration: underline;
+    margin: 15px 5px;
+  }

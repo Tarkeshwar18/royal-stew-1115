@@ -339,8 +339,8 @@
 <script>
     // ............................................search page functionality .....................................................
 
-    let url =  "https://63c788db5c0760f69ab9188f.mockapi.io/products";
-
+    const url =  "https://63c788db5c0760f69ab9188f.mockapi.io/products";
+    let cartdata=JSON.parse(localStorage.getItem('cart'))||[];
     let icon = document.getElementById("seach-icon");
     let main = document.getElementById("search_result_div");
     let sorting = document.getElementById("sortByprice");
@@ -349,9 +349,11 @@
     let new_data = []
     let productList = []
     let sortList = []
+   
     fetch(url)
     .then(res => res.json())
     .then((data)=>{
+        // console.log("data",data);
         
         productList = data.map((item)=>{
            return{
@@ -409,10 +411,11 @@
 
     }
     
-
+   
     function filterDataclick(new_data){
 
         new_data.forEach(ele=>{
+           new_data.length++;
             let card_list = document.createElement("div");
             card_list.setAttribute("id","card-list");
 
@@ -426,6 +429,9 @@
             image.setAttribute("src",ele.image);
             imgdiv.append(image);
 
+            let title = document.createElement("h2");
+            title.innerText = ele.title;
+
             let detail_div=document.createElement("div");
             detail_div.setAttribute("class","detail_div")
             let price = document.createElement("h4");
@@ -436,13 +442,42 @@
             let btn=document.createElement("button");
             btn.setAttribute("class","home-btn")
             btn.innerText="Add To Cart"
-            detail_div.append(price,descreption,btn)
+            console.log("ele",ele)
+            
+            // <----------------------experiment------------------------------------------------------------------->
+          let flag=false;
+          btn.addEventListener("click",(el)=>{
+            // console.log("el",el)
+            // let cartdata=JSON.parse(localStorage.getItem("cart"))||[];
+            for(let i=0;i<cartdata.length;i++){
+                // console.log("cartdata[i].title==ele.title",cartdata[i].title,ele.title,cartdata[i].title==ele.title)
+              if(cartdata[i].title==ele.title){
+                flag=true;
+                // break;
+              }
+            }
+            if(flag==true){
+                alert("Product is Already Added")
+            }
+            else{
+                cartdata.push({...ele,quantity:1});
+               localStorage.setItem("cart",JSON.stringify(cartdata));
+             alert("Product Added To Cart");
+             
+            }
 
+            // cartdata.push({...ele,quantity:1});
+            // localStorage.setItem("cart",JSON.stringify(cartdata));
+            // alert("Product Added To Cart");
+             
+           
+          })
+            detail_div.append(title,price,descreption,btn)
             card.append(imgdiv,detail_div)
             card_list.append(card)
             main.append(card_list);
-        })
-    }
-   
+        });
+      }
+    
 
 </script>
