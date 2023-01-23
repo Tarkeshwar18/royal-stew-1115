@@ -1,442 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stromify Online & In Store: Shoes, Jewelry, Clothing, Makeup, Dresses</title>
-    <link rel="stylesheet" href="cart.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
     <style>
-        #cart-container {
-            width: 95%;
-            margin: auto;
-            margin-top: 50px;
-            margin-bottom: 100px;
-        }
-        #buttons > button {
-            background-color: white;
-            border: 1px solid lightgray;
-            padding: 14px 30px;
-            font-size: 16px;
-        }
-        #saveForLaterBtn {
-            margin-left: -5px;
-        }
-        #buttons > #shoppingBagBtn {
-            background-color: lightgray;
-        }
-        .hr-top {
-            margin-top: 7px;
-            margin-bottom: 30px;
-        }
-        .hr-bottom {
-            margin: 30px 0px;
-        }
-        #cart-container > h2 {
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-        #cart-container > h2 + p {
-            margin-top: 10px;
-            margin-bottom: 25px;
-        }
-        .blue {
-            color: dodgerblue;
-        }
-        #emptyCart > button {
-            width: 370px;
-            font-size: 16px;
-            padding: 15px 0px;
-            background-color: white;
-            border: 1px solid black;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-        #emptyCart h2, #shoppingBag > h2 {
-            margin-top: 30px;
-        }
-        #emptyCart p, #product-bottom-left > p {
-            margin: 15px 0px;
-        }
-        #continueShoppingBtn:hover, #checkoutBtn:hover {
-            cursor: pointer;
-        }
-        #shoppingBag > h2 + p {
-            margin-top: 10px;
-            margin-bottom: 30px;
-        }
-        #shoppingBag > h3 + p {
-            margin-top: 10px;
-            margin-bottom: 30px;
-        }
-        #product-bottom {
-            display: flex;
-            justify-content: space-between;
-        }
-        #product-bottom > #product-bottom-left {
-            width: 40%;
-        }
-        #product-bottom > #product-bottom-right {
-            width: 30%;
-        }
-        #products-price {
-            display: flex;
-            justify-content: space-between;
-        }
-        #product-bottom-right > hr {
-            margin: 15px 0px;
-        }
-        #checkoutBtn {
-            width: 100%;
-            color: white;
-            font-size: 16px;
-            padding: 14px 0px;
-            background-color: black;
-        }
-        .shopping-products {
-            display: flex;
-            justify-content: space-between;
-        }
-        .shopping-products-left {
-            width: 30%;
-        }
-        .shopping-products-middle {
-            width: 30%;
-            line-height: 1.5;
-        }
-        .shopping-products-right {
-            width: 10%;
-        }
-        .shopping-products-left {
-            display: flex;
-        }
-        .shopping-products-left > .product-image > img {
-            width: 100px;
-            height: 150px;
-            object-fit: contain;
-        }
-        .shopping-products-left > .product-text {
-            margin-left: 30px;
-            line-height: 1.5;
-        }
-        .product-image > div {
-            display: flex;
-            justify-content: space-between;
-        }
-        .product-text-bottom > .productQuantity {
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        .product-text-bottom > div {
-            display: flex;
-            justify-content: space-between;
-        }
-        .productQuantity {
-            border: none;
-        }
-    </style>
-</head>
-<body>
-    <div id="container">
-        <div id="nav">
-            <div id="nav-top">
-                <h1><a href="index.html">STROMIFY</a></h1>
-                <div>
-                    <input id="search" type="text" placeholder="Search for products or brands">
-                </div>
-                <p id="showUserName"><a href="signup-login.html">Sign In</a></p>
-                <p id="signOut">Stores</p>
-                <p>Purchases</p>
-                <p>Cart</p>
-            </div>
-            <hr id="nav-hr">
-            <div id="nav-bottom">
-                <p>Holiday Gifts</p>
-                <p>Holiday Deals</p>
-                <p><a href="womens.html">Women</a></p>
-                <p><a href="mens.html">Men</a></p>
-                <p><a href="kids.html">Kids</a></p>
-                <p>Young Adult</p>
-                <p>Activewear</p>
-                <p>Home</p>
-                <p>Beauty</p>
-                <p>Designer</p>
-                <p>The Thread</p>
-            </div>
-        </div>
-        
-        <div id="cart-container">
-            <div id="buttons">
-                <button id="shoppingBagBtn">Shopping Bag(0)</button>
-                <button id="saveForLaterBtn">Saved for Later(0)</button>
-            </div>
-
-            
-            
-            <div id="shoppingBag">
-                <h2>Shopping Bag</h2>
-                <p>Items in your bag are not on hold.</p>
+      /* Write all necessery css here  */
+      #cart-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        background: linear-gradient(90deg, rgb(238, 238, 241) 0%, rgb(209, 209, 236) 35%, rgb(158, 209, 219) 100%);
+        width: 55%;
+      }
+      img{
+        width: 100%;
+      }
+      #cart-container>div{
+        padding: 0px 40px;
+        box-shadow: rgba(241, 239, 239, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      #total{
+       height: auto;
+        border: 1px solid turquoise;
+        width: 90%;
+        background-color: rgb(204, 224, 164);
+        text-align: right;
+        padding-right: 30px;
+       
+      }
+      #broke>div{
+       /* height: 100px; */
+       width: 35%;
+      margin: 0px 730px;
     
-                <p>Choose gift options when you check out.</p>
-                <hr class="hr-top">
-                
-                <h3>Shipping (1 item) to <span class="blue">India</span></h3>
-                <p>International shipping</p>
-                
-                <div id="shopping-products-container"></div>
-                
-                <hr class="hr-bottom">
+       
+      }
+      #broke{
+        /* height: auto; */
+        width: 100%;
+        align-items: flex-end;
+        /* border: 1px solid blue; */
+        margin-top: -692px;
+      }
+      #cart-total{
+        color: #eb5ea4;
+      }
+      #bts{
+        text-align: center;
 
-                <div id="product-bottom">
-                    <div id="product-bottom-left">
-                        <p>Accepted Payment Methods</p>
-                        <p>Need help? Call 1.888.282.6060 or <span class="blue">chat with us</span></p>
-                        <p class="blue">Shipping internationally?</p>
-                    </div>
-                    <div id="product-bottom-right">
-                        <div id="products-price">
-                            <p>Subtotal</p>
-                            <p id="totalPrice">INR 9,898</p>
-                        </div>
-                        <hr>
-                        <button id="checkoutBtn">Check Out</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="footer">
-            <div id="footer-top">
-                <div>
-                   <h3>Customer Service</h3>
-                    <p>Contact Us</p>
-                    <p>Order Status</p>
-                    <p>Shipping</p>
-                    <p>Return Policy & Exchanges</p>
-                    <p>Price Adjustments</p>
-                    <p>Gift Cards</p>
-                    <p>FAQ</p>
-                    <p>Product Recalls</p>
-                    <div id="india">
-                        <img src="https://n.nordstrommedia.com/alias/IN.gif" alt="">
-                        <p>India</p>
-                    </div>
-                </div>
-                <div>
-                   <h3>About Us</h3>
-                    <p>All Brands</p>
-                    <p>Careers</p>
-                    <p>Corporate Social Responsibility</p>
-                    <p>Diversity, Inclusion & Belonging</p>
-                    <p>Get Email Updates</p>
-                    <p>Nordstorm Blog</p>
-                    <p>The Thread</p>
-                    <p>Nordy Podcast</p>
-                </div>
-                <div>
-                   <h3>Stores & Services</h3>
-                    <p>Find a Store</p>
-                    <p>Free Style Help</p>
-                    <p>Alterations & Tailoring</p>
-                    <p>Pop-In Shop</p>
-                    <p>Virtual Events</p>
-                    <p>Spa Nordstrom</p>
-                    <p>Nordstrom Restaurants</p>
-                    <p>Nordstrom Local</p>
-                </div>
-                <div>
-                   <h3>Nordstrom Card & Rewards</h3>
-                    <p>The Nordy Club Rewards</p>
-                    <p>Pay My Bill</p>
-                    <p>Manage My Nordstrom Card</p>
-                </div>
-                <div>
-                   <h3>Nordstrom, Inc.</h3>
-                    <p>Nordstrom Rack</p>
-                    <p>Nordstrom Canada</p>
-                    <p>Investor Relations</p>
-                    <p>Press Releases</p>
-                    <p>Nordstrom Media Network</p>
-                </div>
-            </div>
-            <div id="footer-bottom">
-                <p>Privacy</p>
-                <p>Do Not Sell My Personal information</p>
-                <p>Terms & Condition</p>
-                <p>Interest-Based Ads</p>
-                <p>@2022 Strimify, Inc.</p>
-            </div>
-        </div>
-
-        <script src="./index.js"></script>
-        <script>
-            var shoppingBag = document.getElementById("shoppingBag");
-            var shoppingBagBtn = document.getElementById("shoppingBagBtn");
-            var shoppingProductsContainer = document.getElementById("shopping-products-container");
-
-            var cartContainer = document.getElementById("cart-container");
-            var checkoutBtn = document.getElementById("checkoutBtn");
-            var productBrand = document.getElementById("product-brand");
-            var productName = document.getElementById("product-name");
-            var productSize = document.getElementById("product-size");
-            var productColor = document.getElementById("product-color");
-            var productsPrice = document.getElementById("products-price");
-            var totalPrice = document.getElementById("totalPrice");
-            var productImg = document.getElementById("product-img");
-            var productQuantity = document.getElementById("productQuantity");
-            
-            
-            var cartProductsArr = JSON.parse(localStorage.getItem("cartProductsArr"));
-            if (cartProductsArr == null) {
-                cartProductsArr = [];
-            }
-
-            shoppingBagBtn.innerText = `Shopping Bag(${cartProductsArr.length})`;
-            
-            if (cartProductsArr == null || cartProductsArr.length == 0) {
-                console.log(cartProductsArr.length);
-                shoppingBag.innerHTML = null;
-                
-                shoppingBag.innerHTML = 
-                `<div id="emptyCart">
-                    <h2>Your bag is empty</h2>
-                    <button id="continueShoppingBtn">Continue Shopping</button>
-                    <p>Accepted Payment Methods</p>
-                    <p>Need help? Call 1.888.282.6060 or <span class="blue">chat with us</span></p>
-                    <p class="blue">Shipping internationally?</p>
-                    </div>`;
-                    
-                var continueShoppingBtn = document.getElementById("continueShoppingBtn");
-                continueShoppingBtn.addEventListener("click", () => {
-                location.href = "./index.html";
-                });
-            }
-            else {
-                var checkOutProductsArr = JSON.parse(localStorage.getItem("checkOutProductsArr"));
-                if (checkOutProductsArr == null) {
-                    checkOutProductsArr = [];
-                }
-                // localStorage.setItem("checkOutProductsArr", JSON.stringify(cartProductsArr));
-
-
-               
-                cartProductsArr.forEach((element, index) => {
-                    console.log(element);
-                    var hr1 = document.createElement("hr");
-                    hr1.setAttribute("class", "hr-bottom");
-
-                    var divMain = document.createElement("div");
-                    divMain.setAttribute("class", "shopping-products");
-                    
-                    var divLeft = document.createElement("div");
-                    divLeft.setAttribute("class", "shopping-products-left");
-                    var divImage = document.createElement("div");
-                    divImage.setAttribute("class", "product-image");
-                    var img3 = document.createElement("img");
-                    img3.setAttribute("src", element.image);
-                    var divText = document.createElement("div");
-                    divText.setAttribute("class", "product-text");
-                    var divTextTop = document.createElement("div");
-                    divTextTop.setAttribute("class", "product-text-top");
-                    var brandT1 = document.createElement("p");
-                    brandT1.innerText = element.brand;
-                    var nameT1 = document.createElement("p");
-                    nameT1.innerText = element.name;
-                    var sizeT1 = document.createElement("p");
-                    sizeT1.innerText = "Size: " + element.size;
-                    var colorT1 = document.createElement("p");
-                    colorT1.innerText = "Color: " + element.color;
-                    var itemT1 = document.createElement("p");
-                    itemT1.innerText = "Item: " + "9626953";
-                    divTextTop.append(brandT1, nameT1, sizeT1, colorT1, itemT1);
-                    var divTextBottom = document.createElement("div");
-                    divTextBottom.setAttribute("class", "product-text-bottom");
-                    var selectB1 = document.createElement("select");
-                    selectB1.setAttribute("class", "productQuantity");
-
-                    checkOutProductsArr.push({...element, totalPrice: element.price, quantity: 1});
-                    console.log(checkOutProductsArr);
-                    
-                    selectB1.addEventListener("change", () => {
-                        checkOutProductsArr[index].quantity = selectB1.value;
-                        console.log(checkOutProductsArr);
-
-                        setSubTotal();
-                    }); 
-
-                    var selectB1Value1 = document.createElement("option");
-                    selectB1Value1.setAttribute("value", 1);
-                    selectB1Value1.innerText = "Qty: 1";
-                    var selectB1Value2 = document.createElement("option");
-                    selectB1Value2.setAttribute("value", 2);
-                    selectB1Value2.innerText = "Qty: 2";
-                    var selectB1Value3 = document.createElement("option");
-                    selectB1Value3.setAttribute("value", 3);
-                    selectB1Value3.innerText = "Qty: 3";
-                    var selectB1Value4 = document.createElement("option");
-                    selectB1Value4.setAttribute("value", 4);
-                    selectB1Value4.innerText = "Qty: 4";
-                    var selectB1Value5 = document.createElement("option");
-                    selectB1Value5.setAttribute("value", 5);
-                    selectB1Value5.innerText = "Qty: 5";
-                    selectB1.append(selectB1Value1, selectB1Value2, selectB1Value3, selectB1Value4, selectB1Value5);
-                    var divB2 = document.createElement("div");
-                    var pB21 = document.createElement("p");
-                    pB21.setAttribute("class", "blue");
-                    pB21.innerText = "Remove";
-                    var pB22 = document.createElement("p");
-                    pB22.setAttribute("class", "blue");
-                    pB22.innerText = "Save for later"; 
-                    divImage.append(img3);
-                    divB2.append(pB21, pB22)
-                    divTextBottom.append(selectB1, divB2);
-                    divText.append(divTextTop, divTextBottom);
-                    divLeft.append(divImage, divText);
-
-                    var divMiddle = document.createElement("div");
-                    divMiddle.setAttribute("class", "shopping-products-middle");
-                    var head3 = document.createElement("h3");
-                    head3.innerText = "Shipping";
-                    var p3 = document.createElement("p");
-                    p3.innerText = "International orders usually arrive within 5–13 business days. We'll give you shipping dates in checkout.";
-                    divMiddle.append(head3, p3);
-
-                    var divRight = document.createElement("div");
-                    divRight.setAttribute("class", "shopping-products-right");
-                    var price1 = document.createElement("p");
-                    var price1Bold = document.createElement("b");
-                    price1Bold.innerText = element.price;
-                    price1.append(price1Bold);
-                    divRight.append(price1);
-
-                    divMain.append(divLeft, divMiddle, divRight);
-                    shoppingProductsContainer.append(hr1, divMain);
-                });
-
-
-
-                checkoutBtn.addEventListener("click", () => {
-                    localStorage.setItem("checkOutProductsArr", JSON.stringify(checkOutProductsArr));
-        
-                    location.href = "./checkout.html";
-                });
-
-
-
-                setSubTotal();
-
-                function setSubTotal() {
-                    var subTotalPrice = 0;
-                    checkOutProductsArr.forEach((element1, index1) => {
-                        subTotalPrice += Number(element1.price.replace("INR ", "").replace(",", "")) * Number(element1.quantity);
-                    });
-                    console.log(subTotalPrice)
-                    totalPrice.innerText = "INR: " + subTotalPrice.toLocaleString();
-                }
-                
-            }
-        </script>
+      }
+      #bts>button{
+        padding: 8px 35px;
+        background-color: aqua;
+        border: 0.5px solid turquoise;
+        border-radius: 5px;
+      }
+      #bts>button:hover{
+        background-color: #eb5ea4;
+        color: mintcream;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>DAILY MART</h1>
+      <a href="./index.html">Home</a>
+      <!-- <a href="./cart.html">Cart</a> -->
+      </div>
+      <div>
+    <h1 id="total"> Your Total Price is:- <span id="cart-total">0</span></h1>
+    </div>
+    
+    <div id="cart-container">
+      <!-- Here Append All the cart Products  -->
+    </div>
+    <div id="broke">
+      <div>
+       <img src="https://img.freepik.com/premium-photo/everything-holiday-gift-wrapping-bows-fly-into-cart-trolley-green-background-with-copy-space_165545-2904.jpg"alt="done">
+       <img src="https://en.pimg.jp/069/779/795/1/69779795.jpg">
+      </div>
+    </div>
+    <div id="bts">
+       <button>MAKE PAYMENT</button>
+    </div>
+    
 
     </div>
-</body>
-</html>
+  </body>
+  </html>
+
+<script src="./cart.js"></script>
