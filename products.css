@@ -49,6 +49,11 @@
     text-decoration: underline;
     background-color: #23bb8b;
 }
+/* #products-container > .product-card > .add-to-cart-btn{
+    background-color: aqua;
+} */
+
+
 @media screen and (min-width: 481px) and (max-width: 720px) {
     #products-container {
         grid-template-columns: repeat(3, 1fr);

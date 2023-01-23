@@ -13,13 +13,14 @@
         grid-template-rows: auto;
         gap: 20px;
         background: linear-gradient(90deg, rgb(238, 238, 241) 0%, rgb(209, 209, 236) 35%, rgb(158, 209, 219) 100%);
-        width: 55%;
+        width: 80%;
+        margin: auto;
       }
       img{
         width: 100%;
       }
       #cart-container>div{
-        padding: 0px 40px;
+        padding: 10px 40px;
         box-shadow: rgba(241, 239, 239, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       }
       #total{
@@ -27,15 +28,15 @@
         border: 1px solid turquoise;
         width: 90%;
         background-color: rgb(204, 224, 164);
-        text-align: right;
-        padding-right: 30px;
+        text-align: center;
+      
        
       }
       #broke>div{
        /* height: 100px; */
        width: 35%;
       margin: 0px 730px;
-    
+      /* position: sticky; */
        
       }
       #broke{
@@ -44,6 +45,7 @@
         align-items: flex-end;
         /* border: 1px solid blue; */
         margin-top: -692px;
+        /* position: sticky; */
       }
       #cart-total{
         color: #eb5ea4;
@@ -54,9 +56,11 @@
       }
       #bts>button{
         padding: 8px 35px;
-        background-color: aqua;
+        background-color: rgb(6, 100, 22);
         border: 0.5px solid turquoise;
         border-radius: 5px;
+        margin: 40px 0px;
+        color: whitesmoke;
       }
       #bts>button:hover{
         background-color: #eb5ea4;
@@ -71,18 +75,18 @@
       <!-- <a href="./cart.html">Cart</a> -->
       </div>
       <div>
-    <h1 id="total"> Your Total Price is:- <span id="cart-total">0</span></h1>
+    <h1 id="total"> Your Total Price is:- Rs. <span id="cart-total">0</span></h1>
     </div>
     
     <div id="cart-container">
       <!-- Here Append All the cart Products  -->
     </div>
-    <div id="broke">
+    <!-- <div id="broke">
       <div>
        <img src="https://img.freepik.com/premium-photo/everything-holiday-gift-wrapping-bows-fly-into-cart-trolley-green-background-with-copy-space_165545-2904.jpg"alt="done">
        <img src="https://en.pimg.jp/069/779/795/1/69779795.jpg">
       </div>
-    </div>
+    </div> -->
     <div id="bts">
        <button>MAKE PAYMENT</button>
     </div>
