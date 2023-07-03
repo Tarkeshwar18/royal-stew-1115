@@ -7,74 +7,119 @@
     <title>Document</title>
 </head>
 <style>
-    *{
-        padding:none;
-        margin: none;
-    }
-#oso{
+  * {
+    padding: none;
+    margin: none;
+  }
+
+  #oso {
     border: 1px solid rgb(247, 247, 248);
     height: 700px;
-    background-color:#f0e5e5; 
-}
-#oso>div{
- background-color: whitesmoke;
-   border: 1px solid turquoise;
-   box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px; ;
-   height: 340px;
-   width: 35%;
-   margin: auto;
-}
-#oso>div{
+    background-color: #f0e5e5;
+  }
+
+  #oso>div {
+    background-color: whitesmoke;
+    border: 1px solid turquoise;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 340px;
+    width: 35%;
+    margin: auto;
+  }
+
+  #oso>div {
     margin-top: 200px;
     border-radius: 10px;
-}
-#oso div{
-    text-align: center;
+  }
 
-}
-#oso>div>#signUp>input{
-    /* background-color: aqua; */
-    height: 25px;
-    border:0.5px solid turquoise ;
+  #oso div {
+    text-align: center;
+  }
+
+  #oso>div>#signUp>input {
+    height: 23px;
+    border: 0.5px solid turquoise;
     border-radius: 8px;
-   width: 55%;
-  padding-top: 5px;
-}
-#oso>div>#signUp:nth-child(n) input{
-   margin-top: 5px;
-}
-#oso>button{
-        justify-content: end;
-        background-color: aqua;
-        text-align: center;
-}
-#container>div{
+    width: 55%;
+    
+  }
+
+  #oso>div>#signUp:nth-child(n) input {
+    margin-top: 5px;
+  }
+
+  #oso>button {
+    justify-content: end;
+    background-color: aqua;
+    text-align: center;
+  }
+
+  #container>div {
     display: flex;
     gap: 10px;
     justify-content: end;
     margin-bottom: -80px;
     padding: 0px 60px;
-}
-#container>div>button{
-  padding: 7px 20px;
-  border:0.5px solid turquoise ;
-  border-radius: 8px;
-  color: darkgreen;
-}
-#container>div>button:hover{
- color: rgb(87, 165, 165);
- background-color: #e7dedf;
-}
-#oso>div>#signIn>input{
-    height: 25px;
-    border:0.5px solid turquoise ;
+    
+  }
+
+  #container>div>button {
+    padding: 7px 20px;
+    border: 0.5px solid turquoise;
     border-radius: 8px;
-   width: 55%;
-  padding-top: 5px;
-}
-#oso>div>#signIn:nth-child(n) input{
-   margin-top: 8px;
-}
+    color: darkgreen;
+    font-size: 20px;
+  }
+
+  #container>div>button:hover {
+    color: rgb(87, 165, 165);
+    background-color: #e7dedf;
+  }
+
+  #oso>div>#signIn>input {
+    height: 25px;
+    border: 0.5px solid turquoise;
+    border-radius: 8px;
+    width: 55%;
+    padding-top: 5px;
+  }
+
+  #oso>div>#signIn:nth-child(n) input {
+    margin-top: 8px;
+  }
+
+  /* Media queries for different screen sizes */
+
+  /* Large screens */
+  @media screen and (min-width: 1200px) {
+    #oso>div {
+      width: 30%;
+    }
+  }
+
+  /* Medium screens */
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    #oso>div {
+      width: 40%;
+    }
+  }
+
+  /* Small screens */
+  @media screen and (max-width: 767px) {
+    #oso>div {
+      width: 70%;
+      margin-top: 100px;
+    }
+
+    #oso>div>#signUp>input,
+    #oso>div>#signIn>input {
+      width: 90%;
+    }
+
+    #container>div {
+      padding: 0px 20px;
+    }
+  }
 </style>
 <body>
     <div id="container">
@@ -88,7 +133,7 @@
         <form id="signUp">
             <h2><i>WELCOME TO DALIY MART</i></h2>
             <h3>CREATE ACCOUNT</h3>
-            <p>Sign Up!</p>
+            <p style="font-size: 19px">Sign Up!</p>
             <input type="text" id="name" placeholder="Name" required />
             <br />
             <input type="email" id="email" placeholder="E-mail" required />
@@ -106,7 +151,7 @@
           </form>
           <form id="signIn">
             <h2><i>ONE MORE STEP TO DAILY MART..</i></h2>
-            <h3>Sign In!</h3>
+            <h3 style="font-size: 23px">Sign In!</h3>
             <input type="email" id="email1" placeholder="E-mail" required />
             <br />
             <input type="password" id="password1" placeholder="Password" required />

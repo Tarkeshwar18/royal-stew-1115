@@ -8,93 +8,149 @@
 
 </head>
 <style>
-#start{
-    text-align: center;
-}
-  #line{
-    margin-top: 100px;
-    border: 1px solid rgb(247, 244, 240); 
-  }
+    * {
+        padding: none;
+        margin: none;
+    }
 
-#guest{
-    margin-top: 100px;
-    /* border: 1px solid blueviolet; */
-    height: 500px;
-    width: 90%;
-    display: flex;
-}
-    span>img{
-    /* border: 1px solid red;  */
-     height: 17px;
-    padding-top: 5px;
-} 
- /* #guest>div>h2{
-    padding: 0px 50px;
-} */
-#guest>h2{
-    padding: 0px 40px;
-} */
-#line1{
-    border: 1px solid rgb(241, 238, 233);
-}
-#guest>div>div:nth-child(2) span{
- padding: 0px 120px;
-}
-#guest>div>div:nth-child(4) span{
- padding: 0px 84px;
-}
-#guest>div>div:nth-child(6) span{
- padding: 0px 150px;
-}
-#guest>div>h2>span{
-    color: aqua; 
-}
-#start>h1{
-    cursor: pointer;
-}
-#guest>div>div:nth-child(6){
-    cursor: pointer;
-}
-#guest>div:nth-child(4) h1{
-    /* background-color: aqua; */
-    display: none;
-}
-#guest>div{
-    /* border: 1px solid red; */
-    width: 100%;
-    padding: 0px 70px;
-}
-#mid{
-    text-align: center;
-}
-#guest>#nike>div:nth-child(1) span{
-    padding: 0px 160px;
-}
-#guest>#nike>div:nth-child(3) span{
-    padding: 0px 50px;
-    /* background-color: aqua; */
-}
-#guest>#nike>div:nth-child(5) span{
-    padding: 0px 30px;
-    /* background-color: aqua; */
-}
-#guest>#nike{
-    display: none;
-}
-#first{
-    border: 1px solid rgb(241, 238, 233);  
+    #start {
+        text-align: center;
+    }
 
-}
-#osa{
-    display: none; 
-    /* background-color: aqua; */
-}
-#kick{
-    display: none;
-}
-#rest{
-    display: none;
-}
+    #line {
+        margin-top: 100px;
+        border: 1px solid rgb(247, 244, 240);
+    }
+
+    #guest {
+        margin-top: 100px;
+        height: 500px;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    span>img {
+        height: 17px;
+        padding-top: 5px;
+        margin-left: 10px
+    }
+
+    #guest>h2 {
+        padding: 0px 40px;
+    }
+
+    #line1 {
+        border: 1px solid rgb(241, 238, 233);
+    }
+
+    #guest>div>div:nth-child(2) span {
+        padding: 0px 100px;
+    }
+
+    #guest>div>div:nth-child(4) span {
+        padding: 0px 84px;
+    }
+
+    #guest>div>div:nth-child(6) span {
+        padding: 0px 100px;
+    }
+
+    #guest>div>h2>span {
+        color: aqua;
+    }
+
+    #start>h1 {
+        cursor: pointer;
+    }
+
+    #guest>div>div:nth-child(6) {
+        cursor: pointer;
+    }
+
+    #guest>div:nth-child(4) h1 {
+        display: none;
+    }
+
+    #guest>div {
+        width: 100%;
+        padding: 0px 70px;
+    }
+
+    #mid {
+        text-align: center;
+    }
+
+    #guest>#nike>div:nth-child(1) span {
+        padding: 0px 100px;
+    }
+
+    #guest>#nike>div:nth-child(3) span {
+        padding: 0px 50px;
+    }
+
+    #guest>#nike>div:nth-child(5) span {
+        padding: 0px 30px;
+    }
+
+    #guest>#nike {
+        display: none;
+    }
+
+    #first {
+        border: 1px solid rgb(241, 238, 233);
+    }
+
+    #osa {
+        display: none;
+    }
+
+    #kick {
+        display: none;
+    }
+
+    #rest {
+        display: none;
+    }
+
+    /* Media queries for different screen sizes */
+
+    /* Large screens */
+    @media screen and (min-width: 1200px) {
+
+        #guest>div>div:nth-child(2) span,
+        #guest>div>div:nth-child(4) span,
+        #guest>div>div:nth-child(6) span,
+        #guest>#nike>div:nth-child(1) span,
+        #guest>#nike>div:nth-child(3) span {
+            padding: 0px;
+        }
+    }
+
+    /* Medium screens */
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+
+        #guest>div>div:nth-child(2) span,
+        #guest>div>div:nth-child(4) span,
+        #guest>div>div:nth-child(6) span,
+        #guest>#nike>div:nth-child(1) span,
+        #guest>#nike>div:nth-child(3) span {
+            padding: 0px;
+        }
+    }
+
+    /* Small screens */
+    @media screen and (max-width: 767px) {
+
+        #guest>div>div:nth-child(2) span,
+        #guest>div>div:nth-child(4) span,
+        #guest>div>div:nth-child(6) span,
+        #guest>#nike>div:nth-child(1) span,
+        #guest>#nike>div:nth-child(3) span {
+            padding: 0px;
+        }
+    }
 </style>
 <body>
     <div id="start">

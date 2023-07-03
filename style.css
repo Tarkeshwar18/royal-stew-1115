@@ -421,7 +421,7 @@ i{
 
 /* .....................................................   MEDIA QUERY   ............................................................. */
 
-@media screen and (min-width:400px) and (max-width:900px) {
+/* @media screen and (min-width:400px) and (max-width:900px) {
 
     .navbar{
         justify-content: space-between;
@@ -587,4 +587,98 @@ i{
     #studio{
         margin-bottom: 60px;
     }
+} */
+@media screen and (min-width: 1200px) {
+
+    /* Add your CSS rules for large screens here */
+    .navbar {
+        height: 85px;
+    }
+
+    .navbar .logo {
+        width: 10%;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .menu {
+        width: 70%;
+    }
+
+    .nav-icon .fa,
+    .bars {
+        margin-top: 15px;
+        font-size: 30px;
+    }
+
+    .dropdown,
+    .cases-sleeves .dropdown {
+        margin-left: -170px;
+    }
+
+    /* Add more styles for large screens */
+}
+
+/* Medium screens */
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+
+    /* Add your CSS rules for medium screens here */
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar .logo {
+        width: 10%;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .menu {
+        width: 70%;
+    }
+
+    .nav-icon .fa,
+    .bars {
+        margin-top: 15px;
+        font-size: 30px;
+    }
+
+    .dropdown,
+    .cases-sleeves .dropdown {
+        margin-left: -170px;
+    }
+
+    /* Add more styles for medium screens */
+}
+
+/* Small screens */
+@media screen and (max-width: 767px) {
+
+    /* Add your CSS rules for small screens here */
+    .navbar {
+        height: 60px;
+    }
+
+    .navbar .logo {
+        width: 10%;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .menu {
+        width: 70%;
+    }
+
+    .nav-icon .fa,
+    .bars {
+        margin-top: 15px;
+        font-size: 30px;
+    }
+
+    .dropdown,
+    .cases-sleeves .dropdown {
+        margin-left: -170px;
+    }
+
+    /* Add more styles for small screens */
 }
